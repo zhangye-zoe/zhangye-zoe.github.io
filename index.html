@@ -3,14 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页</title>
+    <title>Ye Zhang - Personal Homepage</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        h1 { color: #0078D4; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0078D4;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .contact a {
+            color: #0078D4;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <h1>欢迎来到我的主页！</h1>
-    <p>这里是我的 GitHub 个人主页。</p>
+    <div class="container">
+        <h1>Ye Zhang</h1>
+        <p>Ph.D. Candidate in Computational Pathology</p>
+        <p>Harbin Institute of Technology, Shenzhen | Leibniz-Institut für Analytische Wissenschaften (ISAS), Germany</p>
+        <div class="contact">
+            <p>Email: <a href="mailto:zhangye94@stu.hit.edu.cn">zhangye94@stu.hit.edu.cn</a></p>
+            <p>Google Scholar: <a href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ&hl=zh-CN" target="_blank">Scholar Profile</a></p>
+        </div>
+        
+        <h2>Education</h2>
+        <ul>
+            <li>Ph.D. Candidate, Computer Science & Technology, HIT Shenzhen (2021 - Present)</li>
+            <li>Joint Ph.D. Training, Biomedical Image Analysis, ISAS Germany (2024 - Present)</li>
+            <li>M.Sc., Applied Statistics, Lanzhou University (2018 - 2021)</li>
+        </ul>
+        
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Computational Pathology & Nuclei Segmentation</li>
+            <li>Multi-Modal AI for Cancer Diagnosis</li>
+            <li>Graph-Based Tumor Microenvironment Modeling</li>
+            <li>Scalable AI for Single-Cell Analysis</li>
+        </ul>
+        
+        <h2>Selected Publications</h2>
+        <ul>
+            <li>DAWN: Domain-Adaptive Weakly Supervised Nuclei Segmentation. IEEE TCSVT 2024</li>
+            <li>Category Prompt Mamba Network for Nuclei Segmentation. AAAI 2025</li>
+            <li>Boundary-aware Contrastive Learning for Semi-supervised Nuclei Segmentation. MIDL 2024 (Oral)</li>
+            <li>Multi-Scale Context Intertwining for Renal Pathology Segmentation. ICASSP 2025</li>
+            <li>Four Color Theorem for Cell Instance Segmentation. ICML 2025 (Under Review)</li>
+        </ul>
+        
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Deep Learning: PyTorch, MMDetection, MONAI</li>
+            <li>Programming: Python, TensorFlow</li>
+            <li>Medical Imaging Tools: QuPath, ImageJ</li>
+        </ul>
+    </div>
 </body>
 </html>
