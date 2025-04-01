@@ -1,109 +1,342 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ye Zhang - Personal Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 70%;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #0078D4;
-        }
-        ul {
-            text-align: left;
-            padding-left: 20px;
-        }
-        .contact a {
-            color: #0078D4;
-            text-decoration: none;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Ye Zhang - Personal Homepage</title>
+  <!-- Import Google Fonts: Merriweather for headings, Open Sans for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6I3m+1+Jgwj1LRR/2N+Hh0t9V1j+X3H6F+We6YhZsOqY8jVuD9hS+vzVb1I6i8ZVh1YwHr2R1wNdCQDlN6JQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #1a237e; /* Dark blue for publication titles */
+      --light-color: #ecf0f1;
+      --background-color: #f0f2f5;
+      --text-color: #333;
+      --card-bg: #fff;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    /* Headings use Merriweather */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Merriweather', serif;
+      margin: 0;
+    }
+    
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      background-color: var(--card-bg);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Center navigation items */
+    }
+    .navbar li {
+      padding: 15px 20px;
+      transition: background-color 0.3s;
+    }
+    .navbar li:hover {
+      background-color: var(--light-color);
+    }
+    .navbar a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+    
+    /* Layout */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+      padding: 0 15px;
+    }
+    
+    /* Sidebar (Personal Info) */
+    .sidebar {
+      flex: 0 0 300px; /* Increased width */
+      background: linear-gradient(135deg, #ffffff, #f7f7f7);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid var(--accent-color);
+    }
+    .sidebar h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+    .sidebar p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+    .sidebar .title {
+      font-size: 1rem;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+    .contact-info a {
+      text-decoration: none;
+      color: var(--primary-color);
+      margin: 0 5px;
+      transition: color 0.3s;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    /* Different fonts for email, Google Scholar and GitHub links */
+    .contact-info a.email {
+      font-family: 'Courier New', monospace;
+    }
+    .contact-info a.scholar {
+      font-family: 'Courier New', monospace;
+    }
+    .contact-info a.github {
+      font-family: 'Georgia', serif;
+    }
+    .contact-info a i {
+      margin-right: 5px;
+    }
+    .contact-info a:hover {
+      color: var(--accent-color);
+    }
+    
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .section {
+      padding: 20px;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+      border-left: 4px solid var(--accent-color);
+      padding-left: 10px;
+    }
+    .section p,
+    .section ul {
+      font-size: 1rem;
+    }
+    .section ul {
+      list-style: disc;
+      margin: 0;
+      margin-left: 20px;
+      padding: 0;
+    }
+    .section ul li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    /* Publication title style */
+    .paper-title {
+      color: var(--accent-color);
+      text-decoration: underline;
+      font-weight: normal;
+    }
+    
+    /* Publications formatting: Bold first author */
+    .publication {
+      margin-bottom: 10px;
+    }
+    .publication span.first-author {
+      font-weight: bold;
+    }
+    
+    /* Specific styling for the postdoctoral search item */
+    .postdoc-search {
+      color: red;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 0 10px;
+      }
+      .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="profile.jpg" alt="Ye Zhang" class="profile-pic">
-        <h1>Ye Zhang</h1>
-        <p>Ph.D. Candidate in Computational Pathology</p>
-        <p>Harbin Institute of Technology, Shenzhen | Leibniz-Institut für Analytische Wissenschaften (ISAS), Germany</p>
-        <div class="contact">
-            <p>Email: <a href="mailto:zhangye94@stu.hit.edu.cn">zhangye94@stu.hit.edu.cn</a> | <a href="mailto:ye.zhang@isas.de">ye.zhang@isas.de</a></p>
-        </div>
-        
-        <h2>Education</h2>
+  <!-- Navbar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Sidebar: Personal Info -->
+    <div class="sidebar">
+      <img src="profile.png" alt="Dr. Ye Zhang" class="profile-pic" />
+      <h2>Ye Zhang</h2>
+      <p class="title">Ph.D. Candidate</p>
+      <p>
+        Harbin Institute of Technology, Shenzhen<br>
+        Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.
+      </p>
+      <div class="contact-info">
+        <p>
+          <a class="email" href="mailto:zhangye94@stu.hit.edu.cn"><i class="fas fa-envelope"></i> zhangye94@stu.hit.edu.cn</a>
+        </p>
+        <p>
+          <a class="scholar" href="https://scholar.google.com/citations?user=YOUR_ID&user=MhB6GCEAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+        </p>
+        <p>
+          <a class="github" href="https://github.com/zhangye-zoe" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Home Section -->
+      <div class="section" id="home">
+        <h2>Home</h2>
+        <p>
+          Welcome! I am a Ph.D. Candidate in Computational Pathology at Harbin Institute of Technology, Shenzhen, and currently a joint training student at Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V. My research focuses on nuclei segmentation, classification, and the application of multimodal AI in cancer diagnosis.
+        </p>
+      </div>
+
+      <!-- News Section -->
+      <div class="section" id="news">
+        <h2>News</h2>
         <ul>
-            <li>Ph.D. Joint Training, ISAS Germany (2024 - Present)</li>
-            <li>Ph.D. Candidate, Computer Science and Technology, HIT Shenzhen (2021 - Present)</li>
-            <li>M.Sc., Applied Statistics, Lanzhou University (2018 - 2021) - Ranking: 1/65</li>
-            <li>B.Sc., Agricultural and Forestry Economics, Beijing Forestry University (2013 - 2017)</li>
+          <li class="postdoc-search"><i class="fas fa-fire"></i> I am seeking postdoctoral positions in medical image analysis starting Fall 2025. Please contact me if you are interested in collaboration.</li>
+          <li>March 2025: A paper accepted at ICME 2025.</li>
+          <li>December 2024: Two papers accepted at AAAI 2025.</li>
+          <li>December 2024: Two papers accepted at ICASSP 2025.</li>
+          <li>September 2024: Began joint Ph.D. training at Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.</li>
         </ul>
-        
-        <h2>Research Interests</h2>
-        <ul>
-            <li>Computational Pathology</li>
-            <li>Nuclei Segmentation and Classification</li>
-            <li>High-Throughput Biomedical Image Analysis</li>
-            <li>Multi-modal AI for Cancer Diagnosis</li>
-            <li>Graph-based Tumor Microenvironment Modeling</li>
-        </ul>
-        
+      </div>
+      
+      
+
+      <!-- Publications Section -->
+      <div class="section" id="publications">
         <h2>Publications</h2>
         <ul>
-            <li>[1] Zhang Y, Wang Y, Fang Z, et al. DAWN: Domain-Adaptive Weakly Supervised Nuclei Segmentation. IEEE TCSVT 2024.</li>
-            <li>[2] Zhang Y, Fang Z, Wang Y, et al. Category Prompt Mamba Network for Nuclei Segmentation and Classification. AAAI 2025.</li>
-            <li>[3] Zhang Y, Guan X, Li H, et al. Multi-Scale Context Intertwining for Panoramic Renal Pathology Segmentation. ICASSP 2025.</li>
-            <li>[4] Zhang Y, Wang Z, Wang Y, et al. Boundary-aware Contrastive Learning for Semi-supervised Nuclei Instance Segmentation. MIDL 2024 (Oral).</li>
-            <li>[5] Zhang Y, Cai L, et al. SEINE: Structure Encoding and Interaction Network for Nuclei Instance Segmentation. JBHI (Major Revision).</li>
-            <li>[6] Zhang Y, Zhou Y, et al. Four Color Theorem for Cell Instance Segmentation. ICML (Submitted).</li>
-            <li>[7] Zhang Y, Zhou Y, et al. PathMR: A Fragmentation-Resilient Multimodal Visual Reasoning for Interpretable Pathology Diagnosis. ICCV (Submitted).</li>
-            <li>[8] Wang Z, Zhang Y, Cai L, et al. Dynamic Pseudo Label Optimization in Point-Supervised Nuclei Segmentation. MICCAI 2024.</li>
-            <li>[9] Fang Z, Zhang Y, et al. Mammil: Multiple instances learning for whole slide images with state space models. BIBM 2024.</li>
-            <li>[10] Guan X, Zhang Y, et al. OT-StainNet: Optimal Transport-Driven Semantic Matching for Weakly Paired H&E-to-IHC Stain Transfer. AAAI 2025.</li>
-            <li>[11] Guan X, Zhang Y, et al. Correlated Multiple IHC Virtual Staining for Breast Histopathological Images. ICASSP 2025.</li>
-            <li>[12] Cai L, Zhang Y, et al. Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Image Classification. MIA (Major Revision).</li>
+          <li class="publication">[1] <span class="first-author">Zhang Y</span>, Wang Y, Fang Z, et al. <span class="paper-title">DAWN: Domain-Adaptive Weakly Supervised Nuclei Segmentation</span>. IEEE TCSVT 2024.</li>
+          <li class="publication">[2] <span class="first-author">Zhang Y</span>, Fang Z, Wang Y, et al. <span class="paper-title">Category Prompt Mamba Network for Nuclei Segmentation and Classification</span>. AAAI 2025.</li>
+          <li class="publication">[3] <span class="first-author">Zhang Y</span>, Guan X, Li H, et al. <span class="paper-title">Multi-Scale Context Intertwining for Panoramic Renal Pathology Segmentation</span>. ICASSP 2025.</li>
+          <li class="publication">[4] <span class="first-author">Zhang Y</span>, Wang Z, Wang Y, et al. <span class="paper-title">Boundary-aware Contrastive Learning for Semi-supervised Nuclei Instance Segmentation</span>. MIDL 2024 (Oral).</li>
+          <li class="publication">[5] <span class="first-author">Zhang Y</span>, Cai L, et al. <span class="paper-title">SEINE: Structure Encoding and Interaction Network for Nuclei Instance Segmentation</span>. JBHI (Major Revision).</li>
+          <li class="publication">[6] <span class="first-author">Zhang Y</span>, Zhou Y, et al. <span class="paper-title">Four Color Theorem for Cell Instance Segmentation</span>. ICML (Submitted).</li>
+          <li class="publication">[7] <span class="first-author">Zhang Y</span>, Zhou Y, et al. <span class="paper-title">PathMR: A Fragmentation-Resilient Multimodal Visual Reasoning for Interpretable Pathology Diagnosis</span>. ICCV (Submitted).</li>
+          <li class="publication">[8] <span class="first-author">Wang Z</span>, Zhang Y, Cai L, et al. <span class="paper-title">Dynamic Pseudo Label Optimization in Point-Supervised Nuclei Segmentation</span>. MICCAI 2024.</li>
+          <li class="publication">[9] <span class="first-author">Fang Z</span>, Zhang Y, et al. <span class="paper-title">Mammil: Multiple Instances Learning for Whole Slide Images with State Space Models</span>. BIBM 2024.</li>
+          <li class="publication">[10] <span class="first-author">Guan X</span>, Zhang Y, et al. <span class="paper-title">OT-StainNet: Optimal Transport-Driven Semantic Matching for Weakly Paired H&E-to-IHC Stain Transfer</span>. AAAI 2025.</li>
+          <li class="publication">[11] <span class="first-author">Guan X</span>, Zhang Y, et al. <span class="paper-title">Correlated Multiple IHC Virtual Staining for Breast Histopathological Images</span>. ICASSP 2025.</li>
+          <li class="publication">[12] <span class="first-author">Cai L</span>, Zhang Y, et al. <span class="paper-title">Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Image Classification</span>. MIA (Major Revision).</li>
         </ul>
-        
-        <h2>Projects</h2>
-        <ul>
-            <li>Computational Pathology Imaging and Key Computational Technologies (2024-2028) - Principal Investigator</li>
-            <li>AI Diagnosis System for Liver Diseases (2021-2023) - Research Member</li>
-            <li>Image Acquisition and Processing (2020-2022) - Research Member</li>
-            <li>Study on Changes in Northern Chinese Lakes Since the 1950s (2019-2024) - Research Member</li>
-        </ul>
-        
+      </div>
+
+      <!-- Awards Section -->
+      <div class="section" id="awards">
         <h2>Awards</h2>
         <ul>
-            <li>Excellent Graduate of Gansu Province</li>
-            <li>AnShuo Scholarship</li>
-            <li>Huawei Scholarship</li>
-            <li>Third Prize in "Huawei Cup" Graduate Mathematical Modeling Competition</li>
+          <li>Excellent Graduate Award – Gansu Province</li>
+          <li>AnShuo Scholarship</li>
+          <li>Huawei Scholarship</li>
+          <li>Third Prize in the "Huawei Cup" Graduate Mathematical Modeling Competition</li>
         </ul>
-        
-        <h2>Technical Skills</h2>
+      </div>
+
+      <!-- Education Section -->
+      <div class="section" id="education">
+        <h2>Education</h2>
         <ul>
-            <li>Deep Learning: PyTorch, MMDetection, MONAI</li>
-            <li>Programming: Python, TensorFlow</li>
-            <li>Medical Imaging Tools: QuPath, ImageJ</li>
+          <li>Joint Ph.D. Training, Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V. (2024 – Present)</li>
+          <li>Ph.D. Candidate, Computer Science, Harbin Institute of Technology, Shenzhen (2021 – Present)</li>
+          <li>M.Sc. in Applied Statistics, Lanzhou University (2018 – 2021)</li>
+          <li>B.Sc. in Agricultural and Forestry Economics, Beijing Forestry University (2013 – 2017)</li>
         </ul>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="section" id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>Computational Pathology Imaging and Key Technologies (2024–2028) – Principal Investigator</li>
+          <li>AI Diagnosis System for Liver Diseases (2021–2023) – Research Team Member</li>
+          <li>Image Acquisition and Processing (2020–2022) – Research Team Member</li>
+          <li>Study on Changes in Northern Chinese Lakes (2019–2024) – Research Team Member</li>
+        </ul>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Deep Learning: PyTorch, MMDetection, MONAI</li>
+          <li>Programming: Python, TensorFlow</li>
+          <li>Medical Imaging Tools: QuPath, ImageJ</li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="section" id="contact">
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out via email or meet me at conferences and academic events for further discussion!
+        </p>
+      </div>
     </div>
+  </div>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 </body>
 </html>
