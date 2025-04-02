@@ -4,24 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dr. Ye Zhang - Personal Homepage</title>
-  <!-- Import Google Fonts: Merriweather for headings, Open Sans for body -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6I3m+1+Jgwj1LRR/2N+Hh0t9V1j+X3H6F+We6YhZsOqY8jVuD9hS+vzVb1I6i8ZVh1YwHr2R1wNdCQDlN6JQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     :root {
       --primary-color: #2c3e50;
-      --accent-color: #1a237e; /* Dark blue for publication titles */
+      --accent-color: #1a237e;
       --light-color: #ecf0f1;
       --background-color: #f0f2f5;
       --text-color: #333;
       --card-bg: #fff;
       --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    
+
     * {
       box-sizing: border-box;
     }
-    
+
     body {
       margin: 0;
       padding: 0;
@@ -30,14 +29,12 @@
       color: var(--text-color);
       line-height: 1.6;
     }
-    
-    /* Headings use Merriweather */
+
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Merriweather', serif;
       margin: 0;
     }
-    
-    /* Navbar */
+
     .navbar {
       width: 100%;
       background-color: var(--card-bg);
@@ -51,7 +48,7 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center; /* Center navigation items */
+      justify-content: center;
     }
     .navbar li {
       padding: 15px 20px;
@@ -64,9 +61,22 @@
       text-decoration: none;
       color: var(--primary-color);
       font-weight: 600;
+      position: relative;
     }
-    
-    /* Layout */
+    .navbar a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: var(--accent-color);
+      transition: width 0.3s;
+    }
+    .navbar a:hover::after {
+      width: 100%;
+    }
+
     .container {
       display: flex;
       max-width: 1200px;
@@ -74,12 +84,11 @@
       gap: 20px;
       padding: 0 15px;
     }
-    
-    /* Sidebar (Personal Info) */
+
     .sidebar {
-      flex: 0 0 300px; /* Increased width */
+      flex: 0 0 280px;
       background: linear-gradient(135deg, #ffffff, #f7f7f7);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 20px;
       text-align: center;
       box-shadow: var(--shadow);
@@ -93,17 +102,17 @@
       border: 4px solid var(--accent-color);
     }
     .sidebar h2 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: var(--primary-color);
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
     .sidebar p {
       margin: 5px 0;
       font-size: 0.95rem;
     }
     .sidebar .title {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--accent-color);
       margin-bottom: 10px;
     }
@@ -116,24 +125,13 @@
       display: inline-flex;
       align-items: center;
     }
-    /* Different fonts for email, Google Scholar and GitHub links */
-    .contact-info a.email {
-      font-family: 'Courier New', monospace;
-    }
-    .contact-info a.scholar {
-      font-family: 'Courier New', monospace;
-    }
-    .contact-info a.github {
-      font-family: 'Georgia', serif;
-    }
     .contact-info a i {
-      margin-right: 5px;
+      margin-right: 6px;
     }
     .contact-info a:hover {
       color: var(--accent-color);
     }
-    
-    /* Main Content */
+
     .main-content {
       flex: 1;
       display: flex;
@@ -141,54 +139,46 @@
       gap: 30px;
     }
     .section {
-      padding: 20px;
+      padding: 25px;
       background-color: var(--card-bg);
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: var(--shadow);
     }
     .section h2 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 15px;
       color: var(--primary-color);
-      border-left: 4px solid var(--accent-color);
-      padding-left: 10px;
-    }
-    .section p,
-    .section ul {
-      font-size: 1rem;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 12px;
     }
     .section ul {
       list-style: disc;
       margin: 0;
-      margin-left: 20px;
+      margin-left: 25px;
       padding: 0;
     }
     .section ul li {
-      margin-bottom: 8px;
-      line-height: 1.5;
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
-    /* Publication title style */
     .paper-title {
       color: var(--accent-color);
       text-decoration: underline;
       font-weight: normal;
     }
-    
-    /* Publications formatting: Bold first author */
     .publication {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .publication span.first-author {
       font-weight: bold;
     }
-    
-    /* Specific styling for the postdoctoral search item */
+
     .postdoc-search {
       color: red;
+      font-weight: bold;
     }
-    
-    /* Responsive */
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
