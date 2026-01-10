@@ -468,35 +468,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.02rem;          /* 让左侧整体比正文略大一点 */
 }
 
-/* 名字区块样式 */
-.name-block {
-  margin-top: 8px;
-  margin-bottom: 9px;          /* 和下面 title 稍微留一点间隔 */
-  line-height: 1.7;           /* 缩小中英之间的间距 */
-}
-
-/* 英文名：主视觉 */
-.name-en {
-  font-size: 1.8rem;             /* 可以 1.8–2.2 之间微调，先 2rem 看效果 */
-  font-weight: 1000;
-  color: var(--primary-color);
-}
-
-/* 中文名：稍微小一点，做补充 */
-.name-zh {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #555;
-}
-
-/* 博后头衔 */
-.sidebar .title {
-  font-size: 0.95rem;
-  color: #4b5bb3;
-  margin-top: 4px;
-  margin-bottom: 10px;
-}
-
 /* 左侧联系方式整体稍微放大 */
 .contact-info {
   margin-top: 10px;
@@ -542,30 +513,41 @@ h1, h2, h3, h4, h5, h6 {
 /* 名字：英文为主标题，中文做一个小副标题 */
 .name-block {
   margin-top: 4px;
-  margin-bottom: 8px;
-  line-height: 1.6;   /* 拉近中英文间距 */
+  margin-bottom: 7px;
+  line-height: 1.9;   /* 拉近中英文间距 */
 }
 
+/* 英文名：作为主标题，稍大一点，优雅一点 */
 .name-en {
-  font-size: 1.8rem;     /* 可以 1.9–2.2 之间自己调 */
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 1.9rem;                 /* 主视觉 */
+  font-weight: 550;                /* 比 700 稍微柔一点 */
+  letter-spacing: 0.04em;          /* 稍微拉开一点间距，更有“署名感” */
+  line-height: 1.4;
   color: #111827;
+  font-family: "Playfair Display", "Times New Roman", serif;
 }
 
+/* 中文名：做为副标题，略小、略浅，用简洁的无衬线 */
 .name-zh {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #010102b1;
+  margin-top: 2px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #4b5563;   /* 比英文名浅一点，层次分明 */
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* 职位：颜色浅一点、看起来像 subtitle */
+/* 职位 / Title：再轻一点，当说明文字用 */
 .sidebar .title {
-  font-size: 1.0rem;
-  color: #086fd5;   /* 深灰，而不是紫色 */
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   margin-top: 4px;
   margin-bottom: 14px;
+  color: #6b7280;  /* 比中文名再浅一点的灰 */
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 
 
 /* 卡片里的普通文字 */
