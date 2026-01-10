@@ -3,473 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ye Zhang - Personal Homepage</title>
+  <title>Ye Zhang - Homepage</title>
+
+  <!-- 字体 & 图标 -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <!-- 保留一个 Font Awesome 即可 -->
   <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --accent-color: #1a237e;
-      --light-color: #ecf0f1;
-      --background-color: #f0f2f5;
-      --text-color: #333;
-      --card-bg: #fff;
-      --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--background-color);
-      font-family: 'Open Sans', sans-serif;
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Merriweather', serif;
-      margin: 0;
-    }
-
-    .navbar {
-      width: 100%;
-      background-color: var(--card-bg);
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    .navbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .navbar li {
-      padding: 15px 20px;
-      transition: background-color 0.3s;
-    }
-    .navbar li:hover {
-      background-color: var(--light-color);
-    }
-    .navbar a {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 600;
-      position: relative;
-    }
-    .navbar a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: var(--accent-color);
-      transition: width 0.3s;
-    }
-    .navbar a:hover::after {
-      width: 100%;
-    }
-
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 20px auto;
-      gap: 20px;
-      padding: 0 15px;
-    }
-
-    .sidebar {
-      flex: 0 0 280px;
-      background: linear-gradient(135deg, #ffffff, #f7f7f7);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 4px solid var(--accent-color);
-    }
-    .sidebar h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 8px;
-    }
-    .sidebar p {
-      margin: 5px 0;
-      font-size: 0.95rem;
-    }
-    .sidebar .title {
-      font-size: 1.05rem;
-      color: var(--accent-color);
-      margin-bottom: 10px;
-    }
-    .contact-info a {
-      text-decoration: none;
-      color: var(--primary-color);
-      margin: 0 5px;
-      transition: color 0.3s;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-    }
-    .contact-info a i {
-      margin-right: 6px;
-    }
-    .contact-info a:hover {
-      color: var(--accent-color);
-    }
-
-    .main-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .section {
-      padding: 25px;
-      background-color: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-    }
-    .section p {
-      text-align: justify;
-      text-align-last: left;
-    }
-    .section h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: var(--primary-color);
-      border-left: 5px solid var(--accent-color);
-      padding-left: 12px;
-    }
-    .section ul {
-      list-style: disc;
-      margin: 0;
-      margin-left: 25px;
-      padding: 0;
-    }
-    .section ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-      text-align: justify;
-      text-align-last: left;
-    }
-    .section h3 {
-      font-size: 1.2rem;
-      color: var(--accent-color);
-      margin-top: 20px;
-      margin-bottom: 10px;
-      border-left: 4px solid var(--accent-color);
-      padding-left: 10px;
-    }
-
-    .publication {
-      margin-bottom: 12px;
-      text-align: justify;
-      text-align-last: left;
-    }
-
-    .publication .paper-title {
-      text-decoration: underline;
-      color: var(--accent-color);
-      font-weight: 500;
-    }
-
-    .publication .first-author {
-      font-weight: bold;
-    }
-
-    .paper-title {
-      color: var(--accent-color);
-      text-decoration: underline;
-      font-weight: normal;
-    }
-    .section .paper-title a {
-      color: var(--primary-color); /* 深蓝灰 */
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s, text-decoration 0.3s;
-    }
-
-    .section .paper-title a:hover {
-      color: var(--accent-color); /* 高亮蓝紫色 */
-      text-decoration: underline;
-    }
-
-    .publication span.first-author {
-      font-weight: bold;
-    }
-
-    .award-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .award-item {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      padding-bottom: 5px;
-      border-bottom: 1px dashed #eee;
-    }
-
-    .award-icon {
-      font-size: 1.3rem;
-      margin-top: 3px;
-      flex-shrink: 0;
-    }
-
-    .award-info {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .award-title {
-      font-weight: 600;
-      color: var(--primary-color);
-      font-size: 1rem;
-    }
-
-    .award-desc {
-      font-size: 0.95rem;
-      color: #555;
-      margin-top: 2px;
-    }
-
-    .award-year {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: gray;
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .edu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .edu-item {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      padding-bottom: 5px;
-      border-bottom: 1px dashed #eee;
-    }
-
-    .edu-icon {
-      font-size: 1.3rem;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .edu-info {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .edu-degree {
-      font-weight: 600;
-      color: var(--primary-color);
-      font-size: 1rem;
-    }
-
-    .edu-school {
-      font-size: 0.95rem;
-      color: #666;
-      margin-top: 2px;
-    }
-
-    .edu-time {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: gray;
-      white-space: nowrap;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .project-item {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      padding-bottom: 5px;
-      border-bottom: 1px dashed #eee;
-    }
-
-    .project-icon {
-      font-size: 1.3rem;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .project-info {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .project-title {
-      font-weight: 600;
-      color: var(--primary-color);
-      font-size: 1rem;
-    }
-
-    .project-role {
-      font-size: 0.95rem;
-      color: #555;
-      margin-top: 2px;
-    }
-
-    .project-time {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: gray;
-      white-space: nowrap;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .contact-block {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .contact-icon {
-      font-size: 1.4rem;
-      margin-top: 3px;
-    }
-
-    .contact-text a {
-      color: var(--accent-color);
-      text-decoration: underline;
-      font-weight: 500;
-    }
-    .contact-text a:hover {
-      color: var(--primary-color);
-    }
-
-    .contact-main {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .contact-main p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    .contact-main a {
-      color: var(--accent-color);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .contact-icons a {
-      font-size: 1.5rem;
-      color: var(--primary-color);
-      transition: color 0.3s;
-    }
-
-    .contact-icons a:hover {
-      color: var(--accent-color);
-    }
-
-
-
-    .skill-group {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .skill-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .skill-content {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .skill-title {
-      font-weight: 600;
-      color: var(--primary-color);
-      font-size: 1.05rem;
-    }
-
-    .skill-list {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-
-    /* .postdoc-search {
-      color: red;
-      font-weight: bold;
-    } */
-    .postdoc-search i {
-      color: red;
-    }
-
-    .postdoc-search {
-      color: black;
-    }
-
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        padding: 0 10px;
-      }
-      .sidebar {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="home.css" />
+  <!-- 网页标签上的小图标（favicon） -->
+  <link rel="icon" type="image/png" href="images/icons/ye.png" />
+  <link rel="apple-touch-icon" href="images/icons/ye.png" />
 </head>
 <body>
   <!-- Navbar -->
@@ -478,7 +23,7 @@
       <li><a href="#about-me">Home</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#awards">Awards</a></li>
+      <li><a href="#experience">Research Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -491,11 +36,14 @@
     <!-- Sidebar: Personal Info -->
     <div class="sidebar">
       <img src="profile.png" alt="Ye Zhang" class="profile-pic" />
-      <h2>Ye Zhang</h2>
-      <!-- <p class="title">Ph.D.</p> -->
-      <p>
-        Ph.D. at Harbin Institute of Technology, Shenzhen<br>
-      </p>
+      <div class="name-block">
+        <div class="name-en">Ye Zhang</div>
+        <div class="name-zh">张 野</div>
+      </div>
+
+      <p class="title">Postdoctoral Fellow, CUHK</p>
+
+
       <div class="contact-info">
         <p>
           <a class="email" href="mailto:zhangye94@stu.hit.edu.cn">
@@ -508,7 +56,10 @@
           </a>
         </p>
         <p>
-          <a class="scholar" href="https://scholar.google.com/citations?user=YOUR_ID&user=MhB6GCEAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+          <!-- 修正 Google Scholar 链接 -->
+          <a class="scholar" href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ" target="_blank">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
         </p>
         <p>
           <a class="github" href="https://github.com/zhangye-zoe" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -543,283 +94,363 @@
 
     <!-- Main Content -->
     <div class="main-content">
-      <!-- Home Section -->
+      <!-- About Me Section（已重写） -->
       <div class="section" id="about-me">
         <h2>About Me</h2>
-      
-        <p style="font-size: 16px; line-height: 1.6;">
-          I am a <strong>Ph.D. Candidate</strong> in <strong>Computational Pathology</strong> at 
-          <span style="font-weight: bold; color: #003366;">Harbin Institute of Technology, Shenzhen</span>, 
-          and a joint training student at 
-          <span style="font-weight: bold; color: #003366;">Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.</span> 
-          My research focuses on 
-          <strong style="color: #0077b6;">nuclei segmentation</strong>, 
-          <strong style="color: #0077b6;">cancer classification</strong>, and the development of 
-          <strong style="color: #0077b6;">interpretable multimodal AI models</strong>.
+
+        <p style="font-size: 16px; line-height: 1.7;">
+          I received my M.Sc. degree in <strong>Statistics</strong> from the 
+          <strong>School of Mathematics and Statistics, Lanzhou University</strong>. 
+          I then obtained my Ph.D. in <strong>Computer Science and Technology</strong> from the 
+          <strong>School of Computer Science and Technology, Harbin Institute of Technology, Shenzhen</strong>, 
+          under the supervision of 
+          <a href="https://faculty.hitsz.edu.cn/zhangyongbing" target="_blank" style="color:#1a73e8; font-weight:600;">
+            Prof. Yongbing Zhang
+          </a>.
         </p>
-      
-        <p style="font-size: 16px; line-height: 1.6;">
-          For my <strong>postdoctoral research</strong>, I aim to integrate 
-          <strong style="color: #4b0082;">histopathological images</strong> with 
-          <strong style="color: #4b0082;">genomic</strong>, 
-          <strong style="color: #4b0082;">transcriptomic</strong>, and 
-          <strong style="color: #4b0082;">spatial omics data</strong> to build 
-          <strong>advanced multimodal models</strong> for 
-          <strong>cancer diagnosis</strong>, <strong>prognosis</strong>, and 
-          <strong>precision therapy</strong>. I'm particularly interested in expanding into 
-          <strong style="color: #2c3e50;">molecular and systems medicine</strong>, 
-          using <strong>cross-modal reasoning</strong> to uncover 
-          <strong>tumor heterogeneity</strong> and enhance <strong>clinical outcomes</strong>.
+        
+        <p style="font-size: 16px; line-height: 1.7;">
+          During my Ph.D., I was awarded the <strong>China Scholarship Council (CSC)</strong> 
+          and conducted research at the 
+          <strong>Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V., Germany</strong>, working with 
+          <a href="https://www.isas.de/en/the-institute/people/1569-jianxu-chen" target="_blank" style="color:#1a73e8; font-weight:600;">
+            Dr. Jianxu Chen
+          </a>. 
+          My doctoral research focused on <strong>computational pathology</strong>, including 
+          nuclei instance segmentation, multimodal large language model, and visual reasoning for cancer diagnosis.
         </p>
-      
-        <p style="font-style: italic; font-size: 16px; color: #555;">
-          💌 <strong>If you are aware of any relevant opportunities or collaborations, I would be delighted to hear from you.</strong>
-        </p>
+        
+        <p style="font-size: 16px; line-height: 1.7;">
+          I am currently a <strong>Postdoctoral Fellow</strong> in the 
+          <strong>Department of Statistics and Data Science, The Chinese University of Hong Kong (CUHK)</strong>, 
+          supervised by 
+          <a href="https://www.sta.cuhk.edu.hk/peoples/zxlin/" target="_blank" style="color:#1a73e8; font-weight:600;">
+            Prof. Zhixiang Lin
+          </a>.
+          My postdoctoral research focuses on integrating <strong>multi-omics</strong> with 
+          <strong>computational pathology</strong> to study cancer diagnosis, tumor heterogeneity, 
+          and interpretable multimodal modeling.
+        </p>        
       </div>
-                 
 
       <!-- News Section -->
       <div class="section" id="news">
         <h2>News</h2>
-      
         <ul style="list-style: none; padding-left: 0; font-size: 16px; line-height: 1.8; font-family: Arial, sans-serif;">
-      
-          <!-- Postdoc Searching -->
+
+          <!-- Postdoc Searching / Position -->
           <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
             <span style="font-size: 20px; margin-right: 10px;">🔥</span>
             <div>
               <div style="font-weight: bold; color: #1a73e8;">Spring 2026</div>
               <div>
-                <strong style="color: #333;">Actively seeking postdoctoral positions</strong> in 
-                <strong style="color: #333;">medical image analysis</strong>.<br>
-                <em style="color: #666;">If you're interested in collaboration, feel free to reach out!</em>
+                <strong style="color: #333;">Will join The Chinese University of Hong Kong</strong> as a
+                <strong>Postdoctoral Fellow</strong> in the Department of Statistics and Data Science.
               </div>
             </div>
           </li>
-      
+
           <!-- ICML 2025 Paper -->
           <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
             <span style="font-size: 20px; margin-right: 10px;">🎉</span>
             <div>
               <div style="font-weight: bold; color: #1a73e8;">May 2025</div>
               <div>
-                Paper <strong style="color: #333;">“Four-color Theorem for Cell Instance Segmentation”</strong> accepted at 
+                Paper <strong style="color: #333;">“The Four Color Theorem for Cell Instance Segmentation”</strong> accepted at
                 <strong style="color: #333;">International Conference on Machine Learning (ICML 2025)</strong>.
               </div>
             </div>
           </li>
-      
-          <!-- JBHI Paper -->
-          <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-            <span style="font-size: 20px; margin-right: 10px;">🎉</span>
-            <div>
-              <div style="font-weight: bold; color: #1a73e8;">Apr. 2025</div>
-              <div>
-                Paper <strong style="color: #333;">“SEINE: Structure Encoding and Interaction Network for Nuclei Instance Segmentation”</strong> accepted at 
-                <strong style="color: #333;">IEEE Journal of Biomedical and Health Informatics (JBHI)</strong>.
-              </div>
-            </div>
-          </li>
-      
+
           <!-- Germany Joint PhD -->
           <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
             <span style="font-size: 20px; margin-right: 10px;">🇩🇪</span>
             <div>
               <div style="font-weight: bold; color: #1a73e8;">Sep. 2024</div>
               <div>
-                Began joint Ph.D. training at 
+                Began joint Ph.D. training at
                 <strong style="color: #333;">Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.</strong>.
               </div>
             </div>
           </li>
-      
         </ul>
       </div>
-      
-      
-      
-      
-      <div class="section" id="education">
-        <h2>Education</h2>
+
+      <!-- 新增：Research Experience -->
+      <div class="section" id="experience">
+        <h2>Research Experience</h2>
         <div class="edu-list">
+
+          <!-- CUHK Postdoc -->
           <div class="edu-item">
-            <div class="edu-icon">🎓</div>
-            <div class="edu-info">
-              <div class="edu-degree">Joint Ph.D. Training in Computational Pathology</div>
-              <div class="edu-school">Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.</div>
+            <div class="edu-icon">
+              <img src="images/logos/cuhk.png" alt="CUHK logo" class="edu-logo">
             </div>
-            <div class="edu-time">2024 – Present</div>
+            <div class="edu-info">
+              <div class="edu-degree">Postdoctoral Fellow, Multi-omics Integration</div>
+              <div class="edu-school">The Chinese University of Hong Kong</div>
+              <div class="edu-school" style="font-size: 0.9rem; color: #555;">
+                Integrating statistical modeling, computational pathology, and multi-omics for cancer research.
+              </div>
+            </div>
+            <div class="edu-time">2026 – Present</div>
           </div>
-      
+
+          <!-- ISAS Joint PhD -->
           <div class="edu-item">
-            <div class="edu-icon">🎓</div>
+            <div class="edu-icon">
+              <img src="images/logos/isas.png" alt="ISAS logo" class="edu-logo">
+            </div>
+            <div class="edu-info">
+              <div class="edu-degree">Joint Ph.D. Trainee, Computational Pathology</div>
+              <div class="edu-school">Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V., Dortmund</div>
+              <div class="edu-school" style="font-size: 0.9rem; color: #555;">
+                Working on multimodal large language models and visual reasoning.
+              </div>
+            </div>
+            <div class="edu-time">2024 – 2025</div>
+          </div>
+
+          <!-- Tsinghua SIGS Visiting -->
+          <div class="edu-item">
+            <div class="edu-icon">
+              <img src="images/logos/sigs.png" alt="Tsinghua SIGS logo" class="edu-logo">
+            </div>
+            <div class="edu-info">
+              <div class="edu-degree">Visiting Ph.D. Researcher, Computer Vision</div>
+              <div class="edu-school">Tsinghua Shenzhen International Graduate School</div>
+              <div class="edu-school" style="font-size: 0.9rem; color: #555;">
+                Research training in computer vision and computational pathology during the doctoral period.
+              </div>
+            </div>
+            <div class="edu-time">2021 – 2022</div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Education Section -->
+      <div class="section" id="education">
+        <h2>Educations</h2>
+        <div class="edu-list">
+
+          <!-- PhD @ HIT SZ -->
+          <div class="edu-item">
+            <div class="edu-icon">
+              <img src="images/logos/hit.png" alt="Harbin Institute of Technology, Shenzhen logo" class="edu-logo">
+            </div>
             <div class="edu-info">
               <div class="edu-degree">Ph.D. in Computer Science and Technology</div>
               <div class="edu-school">Harbin Institute of Technology, Shenzhen</div>
+              <div class="edu-school" style="font-size: 0.9rem; color: #555;">
+                Dissertation focused on computational pathology, nuclei instance segmentation, and cancer-related image analysis.
+              </div>
             </div>
-            <div class="edu-time">2021 – Present</div>
+            <div class="edu-time">2021 – 2025</div>
           </div>
-      
+
+          <!-- MSc @ Lanzhou University -->
           <div class="edu-item">
-            <div class="edu-icon">🎓</div>
+            <div class="edu-icon">
+              <img src="images/logos/lzu.png" alt="Lanzhou University logo" class="edu-logo">
+            </div>
             <div class="edu-info">
               <div class="edu-degree">M.Sc. in Applied Statistics</div>
               <div class="edu-school">Lanzhou University</div>
+              <div class="edu-school" style="font-size: 0.9rem; color: #555;">
+                Training in machine learning and deep learning, with a particular focus on graph neural networks and time-series prediction. 
+              </div>
             </div>
             <div class="edu-time">2018 – 2021</div>
           </div>
-      
+
+          <!-- BSc @ Beijing Forestry University -->
           <div class="edu-item">
-            <div class="edu-icon">🎓</div>
+            <div class="edu-icon">
+              <img src="images/logos/bfu.png" alt="Beijing Forestry University logo" class="edu-logo">
+            </div>
             <div class="edu-info">
-              <div class="edu-degree">B.Sc. in Agricultural and Forestry Economics</div>
+              <div class="edu-degree">B.M. in Agricultural and Forestry Economics</div>
               <div class="edu-school">Beijing Forestry University</div>
+              <div class="edu-school" style="font-size: 0.9rem; color: #555;">
+                Early training in economics and statistics, with exposure to data, systems thinking, and applied quantitative analysis.
+              </div>
             </div>
             <div class="edu-time">2013 – 2017</div>
           </div>
+
         </div>
       </div>
-      
 
+
+      <!-- Publications Section -->
       <div class="section" id="publications">
         <h2>Publications</h2>
-      
+
+        <p style="font-size: 1.1rem; color: #555; margin-bottom: 10px;">
+          A complete list of my publications can be found on my
+          <a href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ"
+             target="_blank" style="color: #1a237e; font-weight: 600;">
+             Google Scholar
+          </a>.
+        </p>
+        
+
+        <!-- Journal Papers -->
         <h3>📘 Journal Papers</h3>
+        <ol class="pub-list">
+          <li class="publication">
+            <span class="pub-index">[J1]</span>
+            <span class="first-author">Zhang Y</span>, Cai L, Wang Z, et al.
+            <span class="paper-title">
+              <a href="https://arxiv.org/abs/2401.09773" target="_blank">
+                SEINE: Structure Encoding and Interaction Network for Nuclei Instance Segmentation
+              </a>
+            </span>.
+            <em>IEEE Journal of Biomedical and Health Informatics (JBHI)</em>, 2025.
+          </li>
 
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Cai L, Wang Z, et al. 
-          <span class="paper-title">
-            <a href="https://arxiv.org/abs/2401.09773" target="_blank">
-              SEINE: Structure Encoding and Interaction Network for Nuclei Instance Segmentation
-            </a>
-          </span>. 
-          <em>IEEE Journal of Biomedical and Health Informatics (JBHI)</em>, 2025.
-        </div>
+          <li class="publication">
+            <span class="pub-index">[J2]</span>
+            <span class="first-author">Zhang Y</span>, Wang Y, Fang Z, et al.
+            <span class="paper-title">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10798459" target="_blank">
+                DAWN: Domain-Adaptive Weakly Supervised Nuclei Segmentation
+              </a>
+            </span>.
+            <em>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</em>, 2024.
+          </li>
 
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Wang Y, Fang Z, et al. 
-          <span class="paper-title">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10798459" target="_blank">
-              DAWN: Domain-Adaptive Weakly Supervised Nuclei Segmentation
-            </a>
-          </span>. 
-          <em>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT),</em> 2024. 
-        </div>
-      
-      
-        <div class="publication">
-          Cai L, Huang S, <span class="first-author">Zhang Y</span>, et al. 
-          <span class="paper-title">
-            <a href="https://arxiv.org/abs/2404.00351" target="_blank">
-              Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Image Classification
-            </a>
-          </span>. 
-          <em>Medical Image Analysis (MIA)</em>, 2025.
-        </div>
-      
+          <li class="publication">
+            <span class="pub-index">[J3]</span>
+            Cai L, Huang S, <span class="first-author">Zhang Y</span>, et al.
+            <span class="paper-title">
+              <a href="https://arxiv.org/abs/2404.00351" target="_blank">
+                Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Image Classification
+              </a>
+            </span>.
+            <em>Medical Image Analysis (MIA)</em>, 2025.
+          </li>
+        </ol>
+
+        <!-- Conference Papers -->
         <h3>📗 Conference Papers</h3>
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Zhou Y, Wang Y, et al. 
-          <span class="paper-title">
-            <a href="https://openreview.net/pdf?id=VK8SuRaJfX" target="_blank">
-              The Four Color Theorem for Cell Instance Segmentation
-            </a>
-          </span>. 
-          <em>ICML 2025.</em>
-        </div>
+        <ol class="pub-list">
+          <li class="publication">
+            <span class="pub-index">[C1]</span>
+            <span class="first-author">Zhang Y</span>, Zhou Y, Wang Y, et al.
+            <span class="paper-title">
+              <a href="https://openreview.net/pdf?id=VK8SuRaJfX" target="_blank">
+                The Four Color Theorem for Cell Instance Segmentation
+              </a>
+            </span>.
+            <em>ICML 2025.</em>
+          </li>
 
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Fang Z, Wang Y, et al. 
-          <span class="paper-title">
-            <a href="https://arxiv.org/abs/2503.10422" target="_blank">
-              Category Prompt Mamba Network for Nuclei Segmentation and Classification
-            </a>
-          </span>. 
-          <em>AAAI 2025.</em>
-        </div>
+          <li class="publication">
+            <span class="pub-index">[C2]</span>
+            <span class="first-author">Zhang Y</span>, Fang Z, Wang Y, et al.
+            <span class="paper-title">
+              <a href="https://arxiv.org/abs/2503.10422" target="_blank">
+                Category Prompt Mamba Network for Nuclei Segmentation and Classification
+              </a>
+            </span>.
+            <em>AAAI 2025.</em>
+          </li>
 
-        <div class="publication">
-          Guan X, Zhang Z, <span class="first-author">Zhang Y</span>, et al. 
-          <span class="paper-title">
-            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/XXXXX" target="_blank">
-              OT-StainNet: Optimal Transport-Driven Semantic Matching for Weakly Paired H&E-to-IHC Stain Transfer
-            </a>
-          </span>. 
-          <em>AAAI 2025.</em>
-        </div>
-      
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Guan X, Li H, et al. 
-          <span class="paper-title">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10889659" target="_blank">
-              Multi-Scale Context Intertwining for Panoramic Renal Pathology Segmentation
-            </a>
-          </span>. 
-          <em>ICASSP 2025.</em>
-        </div>
+          <li class="publication">
+            <span class="pub-index">[C3]</span>
+            Guan X, Zhang Z, <span class="first-author">Zhang Y</span>, et al.
+            <span class="paper-title">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/XXXXX" target="_blank">
+                OT-StainNet: Optimal Transport-Driven Semantic Matching for Weakly Paired H&E-to-IHC Stain Transfer
+              </a>
+            </span>.
+            <em>AAAI 2025.</em>
+          </li>
 
-        <div class="publication">
-          Guan X, Zhang Z, <span class="first-author">Zhang Y</span>, et al. 
-          <span class="paper-title">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10889239" target="_blank">
-              Correlated Multiple IHC Virtual Staining for Breast Histopathological Images
-            </a>
-          </span>. 
-          <em>ICASSP 2025.</em>
-        </div>
+          <li class="publication">
+            <span class="pub-index">[C4]</span>
+            <span class="first-author">Zhang Y</span>, Guan X, Li H, et al.
+            <span class="paper-title">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10889659" target="_blank">
+                Multi-Scale Context Intertwining for Panoramic Renal Pathology Segmentation
+              </a>
+            </span>.
+            <em>ICASSP 2025.</em>
+          </li>
 
-        <div class="publication">
-          Zhang L, <span class="first-author">Zhang Y</span>, Cai L, et al. 
-          <span class="paper-title">
-            <a href="https://ieeexplore.ieee.org" target="_blank">
-              Relation-Aware Graph Attention Network for Nuclei Classification
-            </a>
-          </span>. 
-          <em>ICME 2025 (Oral).</em>
-        </div>
-      
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Wang Z, Wang Y, et al. 
-          <span class="paper-title">
-            <a href="https://proceedings.mlr.press/v250/zhang24a.html" target="_blank">
-              Boundary-aware Contrastive Learning for Semi-supervised Nuclei Instance Segmentation
-            </a>
-          </span>. 
-          <em>MIDL 2024 (Oral).</em>
-        </div>
-      
-        <div class="publication">
-          Wang Z, <span class="first-author">Zhang Y</span>, Cai L, et al. 
-          <span class="paper-title">
-            <a href="https://link.springer.com/chapter/10.1007/978-3-031-72111-3_21" target="_blank">
-              Dynamic Pseudo Label Optimization in Point-Supervised Nuclei Segmentation
-            </a>
-          </span>. 
-          <em>MICCAI 2024.</em>
-        </div>
-      
-        <div class="publication">
-          Fang Z, Wang Y, <span class="first-author">Zhang Y</span>, et al. 
-          <span class="paper-title">
-            <a href="https://ieeexplore.ieee.org/abstract/document/10822552" target="_blank">
-              Mammil: Multiple Instances Learning for Whole Slide Images with State Space Models
-            </a>
-          </span>. 
-          <em>BIBM 2024.</em>
-        </div>
+          <li class="publication">
+            <span class="pub-index">[C5]</span>
+            Guan X, Zhang Z, <span class="first-author">Zhang Y</span>, et al.
+            <span class="paper-title">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10889239" target="_blank">
+                Correlated Multiple IHC Virtual Staining for Breast Histopathological Images
+              </a>
+            </span>.
+            <em>ICASSP 2025.</em>
+          </li>
 
-      
+          <li class="publication">
+            <span class="pub-index">[C6]</span>
+            Zhang L, <span class="first-author">Zhang Y</span>, Cai L, et al.
+            <span class="paper-title">
+              <a href="https://ieeexplore.ieee.org" target="_blank">
+                Relation-Aware Graph Attention Network for Nuclei Classification
+              </a>
+            </span>.
+            <em>ICME 2025 (Oral).</em>
+          </li>
+
+          <li class="publication">
+            <span class="pub-index">[C7]</span>
+            <span class="first-author">Zhang Y</span>, Wang Z, Wang Y, et al.
+            <span class="paper-title">
+              <a href="https://proceedings.mlr.press/v250/zhang24a.html" target="_blank">
+                Boundary-aware Contrastive Learning for Semi-supervised Nuclei Instance Segmentation
+              </a>
+            </span>.
+            <em>MIDL 2024 (Oral).</em>
+          </li>
+
+          <li class="publication">
+            <span class="pub-index">[C8]</span>
+            Wang Z, <span class="first-author">Zhang Y</span>, Cai L, et al.
+            <span class="paper-title">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-72111-3_21" target="_blank">
+                Dynamic Pseudo Label Optimization in Point-Supervised Nuclei Segmentation
+              </a>
+            </span>.
+            <em>MICCAI 2024.</em>
+          </li>
+
+          <li class="publication">
+            <span class="pub-index">[C9]</span>
+            Fang Z, Wang Y, <span class="first-author">Zhang Y</span>, et al.
+            <span class="paper-title">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10822552" target="_blank">
+                Mammil: Multiple Instances Learning for Whole Slide Images with State Space Models
+              </a>
+            </span>.
+            <em>BIBM 2024.</em>
+          </li>
+        </ol>
+
+        <!-- Under Review -->
         <h3>📄 Under Review</h3>
-      
-        <div class="publication">
-          <span class="first-author">Zhang Y</span>, Zhou Y, Wang H, et al. 
-          <span class="paper-title">PathMR: A Fragmentation-Resilient Multimodal Visual Reasoning for Interpretable Pathology Diagnosis</span>. 
-          <em>Submitted to ICCV.</em>
-        </div>
+        <ol class="pub-list">
+          <li class="publication">
+            <span class="pub-index">[U1]</span>
+            <span class="first-author">Zhang Y</span>, Zhou Y, Wang H, et al.
+            <span class="paper-title">
+              PathMR: A Fragmentation-Resilient Multimodal Visual Reasoning for Interpretable Pathology Diagnosis
+            </span>.
+            <em>Submitted to ICCV.</em>
+          </li>
+        </ol>
       </div>
-      
 
-      
 
       <!-- Awards Section -->
       <div class="section" id="awards">
@@ -833,7 +464,7 @@
             </div>
             <div class="award-year">2021</div>
           </div>
-      
+
           <div class="award-item">
             <div class="award-icon">🎓</div>
             <div class="award-info">
@@ -842,7 +473,7 @@
             </div>
             <div class="award-year">2020</div>
           </div>
-      
+
           <div class="award-item">
             <div class="award-icon">🎖️</div>
             <div class="award-info">
@@ -851,7 +482,7 @@
             </div>
             <div class="award-year">2019</div>
           </div>
-      
+
           <div class="award-item">
             <div class="award-icon">📐</div>
             <div class="award-info">
@@ -862,11 +493,6 @@
           </div>
         </div>
       </div>
-      
-
-      
-      
-      
 
       <!-- Projects Section -->
       <div class="section" id="projects">
@@ -880,7 +506,7 @@
             </div>
             <div class="project-time">2024–2028</div>
           </div>
-      
+
           <div class="project-item">
             <div class="project-icon">📁</div>
             <div class="project-info">
@@ -889,7 +515,7 @@
             </div>
             <div class="project-time">2021–2023</div>
           </div>
-      
+
           <div class="project-item">
             <div class="project-icon">📁</div>
             <div class="project-info">
@@ -898,7 +524,7 @@
             </div>
             <div class="project-time">2020–2022</div>
           </div>
-      
+
           <div class="project-item">
             <div class="project-icon">📁</div>
             <div class="project-info">
@@ -909,7 +535,6 @@
           </div>
         </div>
       </div>
-      
 
       <!-- Skills Section -->
       <div class="section" id="skills">
@@ -921,7 +546,7 @@
             <div class="skill-list">PyTorch, MMDetection, MONAI</div>
           </div>
         </div>
-      
+
         <div class="skill-group">
           <div class="skill-icon">💻</div>
           <div class="skill-content">
@@ -929,7 +554,7 @@
             <div class="skill-list">Python, TensorFlow</div>
           </div>
         </div>
-      
+
         <div class="skill-group">
           <div class="skill-icon">🧬</div>
           <div class="skill-content">
@@ -938,14 +563,14 @@
           </div>
         </div>
       </div>
-      
 
       <!-- Contact Section -->
       <div class="section" id="contact">
         <h2>Contact</h2>
         <div class="contact-main">
           <p>
-            📬 I’m always happy to connect. Feel free to <a href="mailto:zhangye94@stu.hit.edu.cn">email me</a> or reach out at conferences and academic events.
+            📬 I’m always happy to connect. Feel free to
+            <a href="mailto:zhangye94@stu.hit.edu.cn">email me</a> or reach out at conferences and academic events.
           </p>
           <div class="contact-icons">
             <a href="mailto:zhangye94@stu.hit.edu.cn" target="_blank" title="Email">
@@ -962,13 +587,9 @@
             </a>
           </div>
         </div>
-      </div>      
       </div>
-      
+
     </div>
   </div>
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 </body>
 </html>
