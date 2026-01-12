@@ -23,9 +23,10 @@
     <ul>
       <li><a href="#about-me">Home</a></li>
       <li><a href="#news">News</a></li>
-      <li><a href="#publications">Publications</a></li>
       <li><a href="#experience">Research Experience</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="#education">Educations</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -132,7 +133,7 @@
         </p>
         
         <p style="font-size: 14px; line-height: 1.5;">
-          During my Ph.D., I was awarded the <strong>China Scholarship Council (CSC)</strong> 
+          During my Ph.D., I was awarded the <strong>China Scholarship Council (CSC)</strong> scholarship
           and conducted research at the 
           <strong>Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V., Germany</strong>, working with 
           <a href="https://www.isas.de/en/the-institute/people/1569-jianxu-chen" target="_blank" style="color:#1a73e8; font-weight:600;">
@@ -241,7 +242,7 @@
               <img src="images/logos/sigs.png" alt="Tsinghua SIGS logo" class="edu-logo">
             </div>
             <div class="edu-info">
-              <div class="edu-degree">Visiting Ph.D. Researcher, Computer Vision</div>
+              <div class="edu-degree">Visiting Ph.D. Student, Computer Vision</div>
               <div class="edu-school">Tsinghua Shenzhen International Graduate School</div>
               <div class="edu-school" style="font-size: 0.9rem; color: #555;">
                 Research training in computer vision and computational pathology during the doctoral period.
@@ -312,7 +313,7 @@
       <div class="section" id="publications">
         <h2>Publications</h2>
 
-        <p style="font-size: 1.0rem; color: #555; margin-bottom: 10px;">
+        <p style="font-size: 0.95rem; color: #555; margin-bottom: 10px;">
           A complete list of my publications can be found on my
           <a href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ"
              target="_blank" style="color: #1a237e; font-weight: 600;">
@@ -462,7 +463,7 @@
         </ol>
 
         <!-- Under Review -->
-        <h3>📄 Under Review</h3>
+        <!-- <h3>📄 Under Review</h3>
         <ol class="pub-list">
           <li class="publication">
             <span class="pub-index">[U1]</span>
@@ -472,7 +473,7 @@
             </span>.
             <em>Submitted to ICCV.</em>
           </li>
-        </ol>
+        </ol> -->
       </div>
 
 
@@ -615,5 +616,38 @@
 
     </div>
   </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  
+    <script>
+      (function () {
+        const backToTopBtn = document.getElementById('back-to-top');
+        const scrollTrigger = 200; // 滚动多少像素后显示按钮
+  
+        // 监听滚动，控制按钮显隐
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > scrollTrigger) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        });
+  
+        // 点击回到顶部（平滑滚动）
+        backToTopBtn.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      })();
+    </script>
+  </body>
+  </html>
+
+  
 </body>
 </html>

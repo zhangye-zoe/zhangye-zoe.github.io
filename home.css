@@ -55,7 +55,7 @@ h6 {
 }
 
 .navbar li {
-  padding: 16px 26px;
+  padding: 16px 20px;
   transition: background-color 0.3s;
 }
 
@@ -532,4 +532,62 @@ h6 {
     flex: 0 0 auto;
     font-size: 0.95rem;  /* 手机上稍微放大一点 */
   }
+}
+
+/* 平滑滚动（配合回到顶部按钮体验更好） */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Back to Top 按钮基础样式 */
+#back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  /* 渐变背景，偏你主页的蓝紫色 */
+  background: linear-gradient(135deg, #4783d2, #514add);
+  color: #ffffff;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.35);
+  z-index: 999;
+
+  /* 默认隐藏 */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* 显示状态 */
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* 悬停微动效 */
+#back-to-top:hover {
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.45);
+  transform: translateY(-2px);
+}
+
+/* 键盘焦点可见性（无障碍） */
+#back-to-top:focus-visible {
+  outline: 2px solid #bfdbfe;
+  outline-offset: 3px;
 }
