@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ye Zhang - Homepage</title>
 
-  <!-- 字体 & 图标 -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <!-- 保留一个 Font Awesome 即可 -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         crossorigin="anonymous" />
   <link rel="stylesheet" href="home.css" />
-  <!-- 网页标签上的小图标（favicon） -->
   <link rel="icon" type="image/png" href="images/icons/ye.png" />
   <link rel="apple-touch-icon" href="images/icons/ye.png" />
 </head>
@@ -24,18 +21,17 @@
       <li><a href="#about-me">Home</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#experience">Research Experience</a></li>
-      <li><a href="#education">Educations</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#reviewing">Reviewing</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 
-  <!-- Main Layout -->
   <div class="container">
-    <!-- Sidebar: Personal Info -->
+    <!-- Sidebar -->
     <div class="sidebar">
       <img src="images/profile.png" alt="Ye Zhang" class="profile-pic" />
       <div class="name-block">
@@ -57,21 +53,18 @@
           </a>
         </p>
         <p>
-          <!-- 修正 Google Scholar 链接 -->
           <a class="scholar" href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ" target="_blank">
             <i class="fas fa-graduation-cap"></i> Google Scholar
           </a>
         </p>
         <p>
-          <!-- 修正 Reading Notes 链接 -->
           <a class="notes" href="https://zhangye-zoe.github.io/notes/" target="_blank">
             <i class="fas fa-book"></i> Reading Notes
           </a>
         </p>
         <p>
-          <!-- 修正 Figure Library 链接 -->
           <a class="figures" href="https://zhangye-zoe.github.io/figures/" target="_blank">
-            <i class="fas far fas far fa-file-image"></i> Figure Library
+            <i class="fas fa-file-image"></i> Figure Library
           </a>
         </p>
         <p>
@@ -106,127 +99,112 @@
         </p>
       </div>
 
-      <!-- Climbing vine decoration -->
       <div class="sidebar-vine" aria-hidden="true">
         <div class="vine-stem"></div>
-
-        <!-- 叶子 -->
         <div class="vine-leaf leaf-1"></div>
         <div class="vine-leaf leaf-2"></div>
         <div class="vine-leaf leaf-3"></div>
         <div class="vine-leaf leaf-4"></div>
-
-        <!-- 小花 -->
         <div class="vine-flower flower-1"></div>
         <div class="vine-flower flower-2"></div>
       </div>
-      <!-- /Climbing vine decoration -->
-
-      <!-- 访客地图脚本（目前注释掉） -->
-      <!-- <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=557998&w=304&t=tt&d=YXmuCDDD4-LDq3w_RL3s3NGZqkx6PUpSSox3FGMvpjM&co=51a6e2&cmo=6fc637&cmn=d68d4c&ct=261a1a'></script> -->
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-      <!-- About Me Section（已重写） -->
       <div class="section" id="about-me">
         <h2>About Me</h2>
 
-        <p style="font-size: 14px; line-height: 1.5;">
-          I am currently a <strong>Postdoctoral Fellow</strong> in the 
-          <strong>Department of Statistics and Data Science, The Chinese University of Hong Kong (CUHK)</strong>, 
-          supervised by 
-          <a href="https://www.sta.cuhk.edu.hk/peoples/zxlin/" target="_blank" style="color:#1a73e8; font-weight:600;">
-            Prof. Zhixiang Lin
-          </a>.
-          My postdoctoral research focuses on integrating <strong>multi-omics</strong> with 
-          <strong>computational pathology</strong> to study cancer diagnosis, tumor heterogeneity, 
+        <p>
+          I am currently a <strong>Postdoctoral Fellow</strong> in the
+          <strong>Department of Statistics and Data Science, The Chinese University of Hong Kong (CUHK)</strong>,
+          supervised by
+          <a href="https://www.sta.cuhk.edu.hk/peoples/zxlin/" target="_blank" class="inline-link">Prof. Zhixiang Lin</a>.
+          My current research focuses on integrating <strong>multi-omics</strong> with
+          <strong>computational pathology</strong> for cancer diagnosis, tumor heterogeneity analysis,
           and interpretable multimodal modeling.
         </p>
 
-        <p style="font-size: 14px; line-height: 1.5;">
-          I received my M.Sc. degree in <strong>Statistics</strong> from the 
-          <strong>School of Mathematics and Statistics, Lanzhou University</strong>. 
-          I then obtained my Ph.D. in <strong>Computer Science and Technology</strong> from the 
-          <strong>School of Computer Science and Technology, Harbin Institute of Technology, Shenzhen</strong>, 
-          under the supervision of 
-          <a href="https://faculty.hitsz.edu.cn/zhangyongbing" target="_blank" style="color:#1a73e8; font-weight:600;">
-            Prof. Yongbing Zhang
-          </a>.
+        <p>
+          I received my M.Sc. degree in <strong>Statistics</strong> from
+          <strong>Lanzhou University</strong>, and my Ph.D. degree in
+          <strong>Computer Science and Technology</strong> from
+          <strong>Harbin Institute of Technology, Shenzhen</strong>, under the supervision of
+          <a href="https://faculty.hitsz.edu.cn/zhangyongbing" target="_blank" class="inline-link">Prof. Yongbing Zhang</a>.
         </p>
-        
-        <p style="font-size: 14px; line-height: 1.5;">
-          During my Ph.D., I was awarded the <strong>China Scholarship Council (CSC)</strong> scholarship
-          and conducted research at the 
-          <strong>Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V., Germany</strong>, working with 
-          <a href="https://www.isas.de/en/the-institute/people/1569-jianxu-chen" target="_blank" style="color:#1a73e8; font-weight:600;">
-            Dr. Jianxu Chen
-          </a>. 
-          My doctoral research focused on <strong>computational pathology</strong>, including 
-          nuclei instance segmentation, multimodal large language model, and visual reasoning for cancer diagnosis.
+
+        <p>
+          During my Ph.D., I was supported by the <strong>China Scholarship Council (CSC)</strong>
+          and conducted research at the
+          <strong>Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V., Germany</strong>,
+          where I worked with
+          <a href="https://www.isas.de/en/the-institute/people/1569-jianxu-chen" target="_blank" class="inline-link">Dr. Jianxu Chen</a>.
+          My doctoral research centered on <strong>computational pathology</strong>, including nuclei instance segmentation,
+          multimodal large language models, and visual reasoning for cancer diagnosis.
         </p>
-        
-        <p style="font-size: 14px; line-height: 1.5;">
-          <i class="fas fa-file-alt" style="margin-right:6px; color:#0ebb95;"></i>
-          I also maintain a collection of online 
-          <a href="https://zhangye-zoe.github.io/notes/" target="_blank" style="color:#1a73e8; font-weight:600;">
-            Reading Notes
-          </a> and
-          <a href="https://zhangye-zoe.github.io/figures/" target="_blank" style="color:#1a73e8; font-weight:600;">
-            Figure Library
-          </a>, where I curate <strong>reading notes</strong>, <strong>key figures</strong>, and thematic summaries spanning <strong>computer vision</strong>, <strong>machine learning</strong>, <strong>multi-omics</strong>, and <strong>biomedical foundations</strong> for long-term study.
+
+        <p>
+          I also maintain a collection of online
+          <a href="https://zhangye-zoe.github.io/notes/" target="_blank" class="inline-link">Reading Notes</a>
+          and
+          <a href="https://zhangye-zoe.github.io/figures/" target="_blank" class="inline-link">Figure Library</a>,
+          where I curate reading notes, key figures, and thematic summaries spanning
+          computer vision, machine learning, multi-omics, and biomedical foundations.
         </p>
       </div>
 
-      <!-- News Section -->
       <div class="section" id="news">
         <h2>News</h2>
-        <ul style="list-style: none; padding-left: 0; line-height: 1.5; font-family: Arial, sans-serif;">
-
-          <!-- Postdoc Searching / Position -->
-          <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-            <span style="font-size: 20px; margin-right: 10px;">🔥</span>
-            <div>
-              <div style="font-weight: bold; color: #1a73e8;">Spring 2026</div>
-              <div>
-                <strong style="color: #333;">Will join The Chinese University of Hong Kong</strong> as a
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-icon">❤️</span>
+            <div class="news-body">
+              <div class="news-date">March 2026</div>
+              <div class="news-text">
+                Join <strong>The Chinese University of Hong Kong</strong> as a
                 <strong>Postdoctoral Fellow</strong> in the Department of Statistics and Data Science.
               </div>
             </div>
           </li>
 
-          <!-- ICML 2025 Paper -->
-          <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-            <span style="font-size: 20px; margin-right: 10px;">🎉</span>
-            <div>
-              <div style="font-weight: bold; color: #1a73e8;">May 2025</div>
-              <div>
-                Paper <strong style="color: #333;">“The Four Color Theorem for Cell Instance Segmentation”</strong> accepted at
-                <strong style="color: #333;">International Conference on Machine Learning (ICML 2025)</strong>.
+          <li class="news-item">
+            <span class="news-icon">🎓</span>
+            <div class="news-body">
+              <div class="news-date">January 2026</div>
+              <div class="news-text">
+                Successfully defended my <strong>Ph.D. dissertation</strong> and obtained a Ph.D. in Engineering.
               </div>
             </div>
           </li>
 
-          <!-- Germany Joint PhD -->
-          <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-            <span style="font-size: 20px; margin-right: 10px;">🇩🇪</span>
-            <div>
-              <div style="font-weight: bold; color: #1a73e8;">Sep. 2024</div>
-              <div>
+
+          <li class="news-item">
+            <span class="news-icon">🎉</span>
+            <div class="news-body">
+              <div class="news-date">May 2025</div>
+              <div class="news-text">
+                Paper <strong>“The Four Color Theorem for Cell Instance Segmentation”</strong> accepted at
+                <strong>ICML 2025</strong>.
+              </div>
+            </div>
+          </li>
+
+          <li class="news-item">
+            <span class="news-icon">🇩🇪</span>
+            <div class="news-body">
+              <div class="news-date">September 2024</div>
+              <div class="news-text">
                 Began joint Ph.D. training at
-                <strong style="color: #333;">Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.</strong>.
+                <strong>Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V.</strong>.
               </div>
             </div>
           </li>
         </ul>
       </div>
 
-      <!-- Research Experience -->
       <div class="section" id="experience">
         <h2>Research Experience</h2>
         <div class="edu-list">
-
-          <!-- CUHK Postdoc -->
           <div class="edu-item">
             <div class="edu-icon">
               <img src="images/logos/cuhk.png" alt="CUHK logo" class="edu-logo">
@@ -234,14 +212,13 @@
             <div class="edu-info">
               <div class="edu-degree">Postdoctoral Fellow, Computational Biology</div>
               <div class="edu-school">The Chinese University of Hong Kong</div>
-              <div class="edu-school" style="font-size: 0.7rem; color: #555;">
+              <div class="edu-school edu-note">
                 Integrating statistical modeling, computational pathology, and multi-omics for cancer research.
               </div>
             </div>
             <div class="edu-time">2026 – Present</div>
           </div>
 
-          <!-- ISAS Joint PhD -->
           <div class="edu-item">
             <div class="edu-icon">
               <img src="images/logos/isas.png" alt="ISAS logo" class="edu-logo">
@@ -249,14 +226,13 @@
             <div class="edu-info">
               <div class="edu-degree">Joint Ph.D. Trainee, Computational Pathology</div>
               <div class="edu-school">Leibniz-Institut für Analytische Wissenschaften – ISAS – e.V., Dortmund</div>
-              <div class="edu-school" style="font-size: 0.7rem; color: #555;">
+              <div class="edu-school edu-note">
                 Working on multimodal large language models and visual reasoning.
               </div>
             </div>
             <div class="edu-time">2024 – 2025</div>
           </div>
 
-          <!-- Tsinghua SIGS Visiting -->
           <div class="edu-item">
             <div class="edu-icon">
               <img src="images/logos/sigs.png" alt="Tsinghua SIGS logo" class="edu-logo">
@@ -264,22 +240,18 @@
             <div class="edu-info">
               <div class="edu-degree">Visiting Ph.D. Student, Computer Vision</div>
               <div class="edu-school">Tsinghua Shenzhen International Graduate School</div>
-              <div class="edu-school" style="font-size: 0.7rem; color: #555;">
+              <div class="edu-school edu-note">
                 Research training in computer vision and computational pathology during the doctoral period.
               </div>
             </div>
             <div class="edu-time">2021 – 2022</div>
           </div>
-
         </div>
       </div>
 
-      <!-- Education Section -->
       <div class="section" id="education">
-        <h2>Educations</h2>
+        <h2>Education</h2>
         <div class="edu-list">
-
-          <!-- PhD @ HIT SZ -->
           <div class="edu-item">
             <div class="edu-icon">
               <img src="images/logos/hit.png" alt="Harbin Institute of Technology, Shenzhen logo" class="edu-logo">
@@ -287,14 +259,13 @@
             <div class="edu-info">
               <div class="edu-degree">Ph.D. in Computer Science and Technology</div>
               <div class="edu-school">Harbin Institute of Technology, Shenzhen</div>
-              <div class="edu-school" style="font-size: 0.7rem; color: #555;">
+              <div class="edu-school edu-note">
                 Dissertation focused on computational pathology, nuclei instance segmentation, and cancer-related image analysis.
               </div>
             </div>
             <div class="edu-time">2021 – 2025</div>
           </div>
 
-          <!-- MSc @ Lanzhou University -->
           <div class="edu-item">
             <div class="edu-icon">
               <img src="images/logos/lzu.png" alt="Lanzhou University logo" class="edu-logo">
@@ -302,14 +273,13 @@
             <div class="edu-info">
               <div class="edu-degree">M.Sc. in Applied Statistics</div>
               <div class="edu-school">Lanzhou University</div>
-              <div class="edu-school" style="font-size: 0.7rem; color: #555;">
-                Training in machine learning and deep learning, with a particular focus on graph neural networks and time-series prediction. 
+              <div class="edu-school edu-note">
+                Training in machine learning and deep learning, with a focus on graph neural networks and time-series prediction.
               </div>
             </div>
             <div class="edu-time">2018 – 2021</div>
           </div>
 
-          <!-- BSc @ Beijing Forestry University -->
           <div class="edu-item">
             <div class="edu-icon">
               <img src="images/logos/bfu.png" alt="Beijing Forestry University logo" class="edu-logo">
@@ -317,392 +287,362 @@
             <div class="edu-info">
               <div class="edu-degree">B.M. in Agricultural and Forestry Economics</div>
               <div class="edu-school">Beijing Forestry University</div>
-              <div class="edu-school" style="font-size: 0.7rem; color: #555;">
+              <div class="edu-school edu-note">
                 Early training in economics and statistics, with exposure to data, systems thinking, and applied quantitative analysis.
               </div>
             </div>
             <div class="edu-time">2013 – 2017</div>
           </div>
-
         </div>
       </div>
 
-    <!-- Publications Section -->
-    <div class="section" id="publications">
-      <h2>Selected Publications</h2>
+      <!-- Publications -->
+      <div class="section" id="publications">
+        <h2>Selected Publications</h2>
 
-      <p class="pub-intro">
-        A selected list of my recent publications in computational pathology, medical image analysis,
-        and machine learning. For a complete publication record, please visit my
-        <a href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ" target="_blank" rel="noopener">
-          Google Scholar
-        </a>.
-      </p>
+        <p class="pub-intro">
+          A selected list of representative publications in computational pathology, medical image analysis,
+          and machine learning. For a complete publication record, please visit my
+          <a href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+        </p>
 
-      <!-- Journal Papers -->
-      <div class="pub-group">
-        <div class="pub-group-title">
-          <span class="pub-group-icon">📘</span>
+        <div class="pub-section-header">
           <span>Journal Articles</span>
         </div>
 
-        <ol class="pub-list">
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                <span class="me">Ye Zhang</span>, Cai L, Wang Z, et al.
-              </div>
-              <div class="pub-title">
+        <div class="pub-compact-list">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ieeexplore.ieee.org/abstract/document/10980302" target="_blank" rel="noopener">
                   SEINE: Structure Encoding and Interaction Network for Nuclei Instance Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE Journal of Biomedical and Health Informatics</span>
-                <span class="pub-badge">JBHI</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                <span class="me">Ye Zhang</span>, Cai L, Wang Z, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10980302" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">IEEE Journal of Biomedical and Health Informatics</span>
+                <span class="tag">JBHI</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10980302" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/zhangye-zoe/SEINE" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                <span class="me">Ye Zhang</span>, Wang Y, Fang Z, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ieeexplore.ieee.org/abstract/document/10798459" target="_blank" rel="noopener">
                   DAWN: Domain-Adaptive Weakly Supervised Nuclei Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE Transactions on Circuits and Systems for Video Technology</span>
-                <span class="pub-badge">TCSVT</span>
-                <span class="pub-badge">2024</span>
+              <div class="pub-authors-line">
+                <span class="me">Ye Zhang</span>, Wang Y, Fang Z, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10798459" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">IEEE Transactions on Circuits and Systems for Video Technology</span>
+                <span class="tag">TCSVT</span>
+                <span class="tag">2024</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10798459" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/zhangye-zoe/DAWN" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Cai L, Huang S, <span class="me">Ye Zhang</span>, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://www.sciencedirect.com/science/article/pii/S1361841525001781" target="_blank" rel="noopener">
                   AttriMIL: Revisiting Attention-Based Multiple Instance Learning for Whole-Slide Pathological Image Classification from the Perspective of Instance Attributes
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">Medical Image Analysis</span>
-                <span class="pub-badge">MIA</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                Cai L, Huang S, <span class="me">Ye Zhang</span>, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S1361841525001781" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">Medical Image Analysis</span>
+                <span class="tag">MIA</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
-        </ol>
-      </div>
+            <div class="pub-actions">
+              <a href="https://www.sciencedirect.com/science/article/pii/S1361841525001781" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/MedCAI/AttriMIL" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+        </div>
 
-      <!-- Conference Papers -->
-      <div class="pub-group">
-        <div class="pub-group-title">
-          <span class="pub-group-icon">📗</span>
+        <div class="pub-section-header">
           <span>Conference Proceedings</span>
         </div>
 
-        <ol class="pub-list">
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                <span class="me">Ye Zhang</span>, Zhou Y, Wang Y, et al.
-              </div>
-              <div class="pub-title">
+        <div class="pub-compact-list">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://proceedings.mlr.press/v267/zhang25do.html" target="_blank" rel="noopener">
                   The Four Color Theorem for Cell Instance Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">International Conference on Machine Learning</span>
-                <span class="pub-badge">ICML</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                <span class="me">Ye Zhang</span>, Zhou Y, Wang Y, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://proceedings.mlr.press/v267/zhang25do.html" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">International Conference on Machine Learning</span>
+                <span class="tag">ICML</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://proceedings.mlr.press/v267/zhang25do.html" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/zhangye-zoe/FCIS" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                <span class="me">Ye Zhang</span>, Fang Z, Wang Y, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/33116" target="_blank" rel="noopener">
                   Category Prompt Mamba Network for Nuclei Segmentation and Classification
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">AAAI Conference on Artificial Intelligence</span>
-                <span class="pub-badge">AAAI</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                <span class="me">Ye Zhang</span>, Fang Z, Wang Y, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/33116" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">AAAI Conference on Artificial Intelligence</span>
+                <span class="tag">AAAI</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/33116" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/zhangye-zoe/CPMamba" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Guan X, Zhang Z, <span class="me">Ye Zhang</span>, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32329" target="_blank" rel="noopener">
                   OT-StainNet: Optimal Transport-Driven Semantic Matching for Weakly Paired H&amp;E-to-IHC Stain Transfer
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">AAAI Conference on Artificial Intelligence</span>
-                <span class="pub-badge">AAAI</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                Guan X, Zhang Z, <span class="me">Ye Zhang</span>, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/32329" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">AAAI Conference on Artificial Intelligence</span>
+                <span class="tag">AAAI</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32329" target="_blank" rel="noopener">Paper</a>
+              <!-- <a href="#" target="_blank" rel="noopener">Code</a> -->
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Zhang L, Sun B, <span class="me">Ye Zhang</span>, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3754883" target="_blank" rel="noopener">
                   Counting by Points: Density-Guided Weakly Supervised Nuclei Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">ACM Multimedia</span>
-                <span class="pub-badge">ACM MM</span>
-                <span class="pub-badge">2025</span>
-                <span class="pub-badge pub-badge-highlight">Oral</span>
+              <div class="pub-authors-line">
+                Zhang L, Sun B, <span class="me">Ye Zhang</span>, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://dl.acm.org/doi/abs/10.1145/3746027.3754883" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">ACM Multimedia</span>
+                <span class="tag">ACM MM</span>
+                <span class="tag">2025</span>
+                <span class="tag highlight">Oral</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3746027.3754883" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/lingboboo/DENSE" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                <span class="me">Ye Zhang</span>, Guan X, Li H, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ieeexplore.ieee.org/abstract/document/10889659" target="_blank" rel="noopener">
                   Multi-Scale Context Intertwining for Panoramic Renal Pathology Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE International Conference on Acoustics, Speech and Signal Processing</span>
-                <span class="pub-badge">ICASSP</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                <span class="me">Ye Zhang</span>, Guan X, Li H, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10889659" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">IEEE International Conference on Acoustics, Speech and Signal Processing</span>
+                <span class="tag">ICASSP</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10889659" target="_blank" rel="noopener">Paper</a>
+              <!-- <a href="#" target="_blank" rel="noopener">Code</a> -->
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Guan X, Zhang Z, <span class="me">Ye Zhang</span>, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ieeexplore.ieee.org/abstract/document/10889239" target="_blank" rel="noopener">
                   Correlated Multiple IHC Virtual Staining for Breast Histopathological Images
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE International Conference on Acoustics, Speech and Signal Processing</span>
-                <span class="pub-badge">ICASSP</span>
-                <span class="pub-badge">2025</span>
+              <div class="pub-authors-line">
+                Guan X, Zhang Z, <span class="me">Ye Zhang</span>, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10889239" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">IEEE International Conference on Acoustics, Speech and Signal Processing</span>
+                <span class="tag">ICASSP</span>
+                <span class="tag">2025</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10889239" target="_blank" rel="noopener">Paper</a>
+              <!-- <a href="#" target="_blank" rel="noopener">Code</a> -->
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Zhang L, <span class="me">Ye Zhang</span>, Cai L, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ieeexplore.ieee.org/document/11210169" target="_blank" rel="noopener">
                   Relation-Aware Graph Attention Network for Nuclei Classification
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE International Conference on Multimedia and Expo</span>
-                <span class="pub-badge">ICME</span>
-                <span class="pub-badge">2025</span>
-                <span class="pub-badge pub-badge-highlight">Oral</span>
+              <div class="pub-authors-line">
+                Zhang L, <span class="me">Ye Zhang</span>, Cai L, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ieeexplore.ieee.org/document/11210169" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">IEEE International Conference on Multimedia and Expo</span>
+                <span class="tag">ICME</span>
+                <span class="tag">2025</span>
+                <span class="tag highlight">Oral</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://ieeexplore.ieee.org/document/11210169" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/lingboboo/RAGAT" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                <span class="me">Ye Zhang</span>, Wang Z, Wang Y, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://proceedings.mlr.press/v250/zhang24a.html" target="_blank" rel="noopener">
                   Boundary-Aware Contrastive Learning for Semi-Supervised Nuclei Instance Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">Medical Imaging with Deep Learning</span>
-                <span class="pub-badge">MIDL</span>
-                <span class="pub-badge">2024</span>
-                <span class="pub-badge pub-badge-highlight">Oral</span>
+              <div class="pub-authors-line">
+                <span class="me">Ye Zhang</span>, Wang Z, Wang Y, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://proceedings.mlr.press/v250/zhang24a.html" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">Medical Imaging with Deep Learning</span>
+                <span class="tag">MIDL</span>
+                <span class="tag">2024</span>
+                <span class="tag highlight">Oral</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://proceedings.mlr.press/v250/zhang24a.html" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/zhangye-zoe/BASS" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Wang Z, <span class="me">Ye Zhang</span>, Cai L, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-72111-3_21" target="_blank" rel="noopener">
                   Dynamic Pseudo Label Optimization in Point-Supervised Nuclei Segmentation
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention</span>
-                <span class="pub-badge">MICCAI</span>
-                <span class="pub-badge">2024</span>
+              <div class="pub-authors-line">
+                Wang Z, <span class="me">Ye Zhang</span>, Cai L, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://link.springer.com/chapter/10.1007/978-3-031-72111-3_21" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">International Conference on Medical Image Computing and Computer-Assisted Intervention</span>
+                <span class="tag">MICCAI</span>
+                <span class="tag">2024</span>
               </div>
             </div>
-          </li>
+            <div class="pub-actions">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-72111-3_21" target="_blank" rel="noopener">Paper</a>
+              <a href="https://github.com/shinning0821/MICCAI24-DoNuSeg" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
 
-          <li class="pub-item">
-            <div class="pub-content">
-              <div class="pub-authors">
-                Fang Z, Wang Y, <span class="me">Ye Zhang</span>, et al.
-              </div>
-              <div class="pub-title">
+          <article class="pub-row">
+            <div class="pub-main">
+              <div class="pub-title-line">
                 <a href="https://ieeexplore.ieee.org/abstract/document/10822552" target="_blank" rel="noopener">
                   MamMIL: Multiple Instance Learning for Whole Slide Images with State Space Models
                 </a>
               </div>
-              <div class="pub-meta">
-                <span class="pub-venue">IEEE International Conference on Bioinformatics and Biomedicine</span>
-                <span class="pub-badge">BIBM</span>
-                <span class="pub-badge">2024</span>
+              <div class="pub-authors-line">
+                Fang Z, Wang Y, <span class="me">Ye Zhang</span>, et al.
               </div>
-              <div class="pub-links">
-                <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10822552" target="_blank" rel="noopener">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-                <a class="code-link" href="#" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> Code
-                </a>
+              <div class="pub-meta-line">
+                <span class="venue">IEEE International Conference on Bioinformatics and Biomedicine</span>
+                <span class="tag">BIBM</span>
+                <span class="tag">2024</span>
               </div>
             </div>
-          </li>
-        </ol>
+            <div class="pub-actions">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10822552" target="_blank" rel="noopener">Paper</a>
+              <a href=" https://github.com/Vison307/MamMIL" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
 
+      <!-- Reviewing -->
+      <div class="section" id="reviewing">
+        <h2>Academic Reviewing</h2>
 
-      <!-- Awards Section -->
+        <p class="review-intro">
+          I have served as a reviewer for leading journals and conferences in medical imaging,
+          computer vision, and machine learning.
+        </p>
+
+        <div class="review-grid">
+          <div class="review-card">
+            <div class="review-card-title">Journals</div>
+            <div class="review-tags">
+              <span>MIA</span>
+              <span>TMI</span>
+              <span>JBHI</span>
+              <span>TCSVT</span>
+              <span>TIP</span>
+              <span>KBS</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card-title">Conferences</div>
+            <div class="review-tags">
+              <span>AAAI</span>
+              <span>ICCV</span>
+              <span>CVPR</span>
+              <span>MICCAI</span>
+              <span>ICML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="section" id="awards">
         <h2>Awards</h2>
         <div class="award-list">
@@ -744,7 +684,6 @@
         </div>
       </div>
 
-      <!-- Projects Section -->
       <div class="section" id="projects">
         <h2>Projects</h2>
         <div class="project-list">
@@ -786,7 +725,6 @@
         </div>
       </div>
 
-      <!-- Skills Section -->
       <div class="section" id="skills">
         <h2>Skills</h2>
         <div class="skill-group">
@@ -813,36 +751,9 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Contact Section -->
-      <div class="section" id="contact">
-        <h2>Contact</h2>
-        <div class="contact-main">
-          <p>
-            📬 I’m always happy to connect. Feel free to
-            <a href="mailto:zhangye94@stu.hit.edu.cn">email me</a> or reach out at conferences and academic events.
-          </p>
-          <div class="contact-icons">
-            <a href="mailto:zhangye94@stu.hit.edu.cn" target="_blank" title="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=MhB6GCEAAAAJ" target="_blank" title="Google Scholar">
-              <i class="fas fa-graduation-cap"></i>
-            </a>
-            <a href="https://github.com/zhangye-zoe" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://orcid.org/my-orcid?orcid=0009-0003-7254-5026" target="_blank" title="ORCID">
-              <i class="fab fa-orcid"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- /main-content -->
-  </div> <!-- /container -->
-
-  <!-- Back to Top Button -->
   <button id="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
@@ -850,9 +761,8 @@
   <script>
     (function () {
       const backToTopBtn = document.getElementById('back-to-top');
-      const scrollTrigger = 200; // 滚动多少像素后显示按钮
+      const scrollTrigger = 200;
 
-      // 监听滚动，控制按钮显隐
       window.addEventListener('scroll', function () {
         if (window.scrollY > scrollTrigger) {
           backToTopBtn.classList.add('visible');
@@ -861,7 +771,6 @@
         }
       });
 
-      // 点击回到顶部（平滑滚动）
       backToTopBtn.addEventListener('click', function () {
         window.scrollTo({
           top: 0,
